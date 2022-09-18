@@ -13,28 +13,28 @@
   },
   {
     "id": 3,
-    "name": "Banana",
-    "price": 1.05,
+    "name": "Bananas",
+    "price": 1.50,
     "imgUrl": "/imgs/banana.jpg"
   },
   {
     "id": 4,
-    "name": "Carro",
+    "name": "Fusca",
     "price": 14000,
     "imgUrl": "/imgs/car.jpg"
   },
   {
     "id": 5,
-    "name": "Car",
-    "price": 14000,
-    "imgUrl": "/imgs/car.jpg"
+    "name": "Smartphone",
+    "price": 1400,
+    "imgUrl": "/imgs/smartphone.jpg"
 
   },
   {
     "id": 6,
-    "name": "Car",
-    "price": 14000,
-    "imgUrl": "/imgs/car.jpg"
+    "name": "Playstation 5",
+    "price": 80,
+    "imgUrl": "/imgs/ps5.jpg"
 
   }
 ]
