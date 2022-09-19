@@ -1,21 +1,24 @@
+import { House, Info, Storefront } from "phosphor-react"
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
 import { useShoppingCart } from "../context/ShoppingCartContext"
+import Logo from "./Logo"
 
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart()
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
+      <Logo width="4%" padding="10px" />
       <Container>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>
-            Home
+           <House size={25} weight="bold" /> Home
           </Nav.Link>
           <Nav.Link to="/store" as={NavLink}>
-            Loja
+            <Storefront size={25} weight="bold" /> Loja
           </Nav.Link>
           <Nav.Link to="/about" as={NavLink}>
-            Sobre
+            <Info size={25} weight="bold" /> Sobre
           </Nav.Link>
         </Nav>
         {cartQuantity > 0 && (

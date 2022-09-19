@@ -8,7 +8,7 @@
   {
     "id": 2,
     "name": "Notebook",
-    "price": 1199,
+    "price": 2599,
     "imgUrl": "/imgs/computer.jpg"
   },
   {
@@ -33,7 +33,7 @@
   {
     "id": 6,
     "name": "Playstation 5",
-    "price": 80,
+    "price": 4500,
     "imgUrl": "/imgs/ps5.jpg"
 
   }
