@@ -1,0 +1,6 @@
+@import url("./reset.css");
+
+.titulo-pagina {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    padding: 10px;
+}
