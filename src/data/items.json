@@ -1,40 +1,40 @@
 [
   {
     "id": 1,
-    "name": "Livro",
-    "price": 10.99,
-    "imgUrl": "/imgs/book.jpg"
+    "name": "kombi",
+    "price": 10000,
+    "imgUrl": "/imgs/kombi.jpg"
   },
   {
     "id": 2,
-    "name": "Notebook",
-    "price": 2599,
-    "imgUrl": "/imgs/computer.jpg"
+    "name": "Uno com escada",
+    "price": 99999999,
+    "imgUrl": "/imgs/uno-escada.jpg"
   },
   {
     "id": 3,
-    "name": "Bananas",
+    "name": "Marea",
     "price": 1.50,
-    "imgUrl": "/imgs/banana.jpg"
+    "imgUrl": "/imgs/marea.jpg"
   },
   {
     "id": 4,
-    "name": "Fusca",
+    "name": "Fusca azul",
     "price": 14000,
-    "imgUrl": "/imgs/car.jpg"
+    "imgUrl": "/imgs/fusca-azul.jpg"
   },
   {
     "id": 5,
-    "name": "Smartphone",
-    "price": 1400,
-    "imgUrl": "/imgs/smartphone.jpg"
+    "name": "Ferrari",
+    "price": 1400000,
+    "imgUrl": "/imgs/ferrari.jpg"
 
   },
   {
     "id": 6,
-    "name": "Playstation 5",
-    "price": 4500,
-    "imgUrl": "/imgs/ps5.jpg"
+    "name": "Brasilia amarela",
+    "price": 10000000,
+    "imgUrl": "/imgs/brasilia.jpg"
 
   }
 ]

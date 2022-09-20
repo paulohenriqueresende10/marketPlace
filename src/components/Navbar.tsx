@@ -8,7 +8,7 @@ export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart()
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
-      <Logo width="4%" padding="10px" />
+      <Logo width="80px" padding="0px" />
       <Container>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>
