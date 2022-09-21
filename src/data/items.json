@@ -3,38 +3,49 @@
     "id": 1,
     "name": "kombi",
     "price": 10000,
-    "imgUrl": "/imgs/kombi.jpg"
+    "imgUrl": "/imgs/kombi.jpg",
+    "categoria": "Van",
+    "montadora": "Volkswagen"
   },
   {
     "id": 2,
     "name": "Uno com escada",
     "price": 99999999,
-    "imgUrl": "/imgs/uno-escada.jpg"
+    "imgUrl": "/imgs/uno-escada.jpg",
+    "categoria": "Hatch",
+    "montadora": "Fiat"
   },
   {
     "id": 3,
     "name": "Marea",
     "price": 1.50,
-    "imgUrl": "/imgs/marea.jpg"
+    "imgUrl": "/imgs/marea.jpg",
+    "categoria": "Sedan",
+    "montadora": "Fiat"
   },
   {
     "id": 4,
     "name": "Fusca azul",
     "price": 14000,
-    "imgUrl": "/imgs/fusca-azul.jpg"
+    "imgUrl": "/imgs/fusca-azul.jpg",
+    "categoria": "Antigos",
+    "montadora": "Volkswagen"
   },
   {
     "id": 5,
     "name": "Ferrari",
     "price": 1400000,
-    "imgUrl": "/imgs/ferrari.jpg"
-
+    "imgUrl": "/imgs/ferrari.jpg",
+    "categoria": "Esportivo",
+    "montadora": "Ferrari"
   },
   {
     "id": 6,
     "name": "Brasilia amarela",
     "price": 10000000,
-    "imgUrl": "/imgs/brasilia.jpg"
+    "imgUrl": "/imgs/brasilia.jpg",
+    "categoria": "Mamonas assassinas",
+    "montadora": "Volkswagen"
 
   }
 ]

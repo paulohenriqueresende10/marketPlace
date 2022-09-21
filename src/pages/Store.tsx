@@ -16,8 +16,11 @@ export function Store() {
   };
   
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const changeInputValue = event.target.value; 
-    console.log(changeInputValue); 
+    const changeSelectValue = event.target.value;
+    const newCar = storeItems.filter((car) => {
+      return car.categoria === changeSelectValue ? true : false
+    });
+    setcars(newCar);
   }
 
   return (

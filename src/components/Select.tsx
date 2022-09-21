@@ -2,7 +2,8 @@ import React from "react";
 
 type selectProps = {
     categorias: {
-        name: string
+        categoria: string,
+        montadora: string
     }[];
     onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
@@ -10,9 +11,10 @@ type selectProps = {
 export default function Select({ onChange, categorias }: selectProps) {
   return (
     <select onChange={onChange}> 
+        <option selected>Selecione</option>  
         {
             categorias.map((categoria) => (
-              <option value={categoria.name}>{categoria.name}</option>
+              <option value={categoria.categoria}>{categoria.categoria}</option>
             )) 
         }
     </select>
