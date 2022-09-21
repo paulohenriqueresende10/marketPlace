@@ -1,4 +1,5 @@
 import React from "react";
+
 type selectProps = {
     categorias: {
         name: string
@@ -7,7 +8,6 @@ type selectProps = {
 }
 
 export default function Select({ onChange, categorias }: selectProps) {
-    // const options = ['selecione','banana', 'maça']; 
   return (
     <select onChange={onChange}> 
         {

@@ -25,7 +25,10 @@ export function Store() {
       <div className="d-flex justify-content-between">
         <h1 className="titulo-pagina">Carros</h1> 
         <div className="d-flex justify-content-center p-3">
-          <Select categorias={storeItems} onChange={handleChange} />
+          <Select 
+            categorias={storeItems} 
+            onChange={handleChange} 
+          />
           <Input
             type="text"
             placeholder="Procure pelo carro desejado"
