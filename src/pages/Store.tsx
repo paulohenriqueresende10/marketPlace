@@ -15,10 +15,17 @@ export function Store() {
     setcars(newCar);
   };
   
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChangeCategoria = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const changeSelectValue = event.target.value;
     const newCar = storeItems.filter((car) => {
       return car.categoria === changeSelectValue ? true : false
+    });
+    setcars(newCar);
+  }
+  const handleChangeMontadora = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const changeSelectValue = event.target.value;
+    const newCar = storeItems.filter((car) => {
+      return car.montadora === changeSelectValue ? true : false
     });
     setcars(newCar);
   }
@@ -29,8 +36,14 @@ export function Store() {
         <h1 className="titulo-pagina">Carros</h1> 
         <div className="d-flex justify-content-center p-3">
           <Select 
-            categorias={storeItems} 
-            onChange={handleChange} 
+            categorias={storeItems}
+            tipo={"montadora"} 
+            onChange={handleChangeMontadora} 
+          />
+          <Select 
+            categorias={storeItems}
+            tipo={"categoria"}  
+            onChange={handleChangeCategoria} 
           />
           <Input
             type="text"
