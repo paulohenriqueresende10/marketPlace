@@ -2,6 +2,7 @@ import React from "react";
 
 type selectProps = {
     categorias: {
+        id: number;
         categoria: string,
         montadora: string
     }[];
@@ -10,12 +11,20 @@ type selectProps = {
 }
 
 export default function Select({ onChange, categorias, tipo }: selectProps) {  
+  categorias = categorias.filter((value, index, self) =>
+  index === self.findIndex((t) => (
+    tipo === 'montadora' 
+      ? t.montadora === value.montadora
+      : t.categoria === value.categoria
+  ))
+); 
   return (
     <select onChange={onChange}> 
-        <option selected>Selecione</option>  
+        <option defaultValue={0}>Selecione</option>  
         {
             categorias.map((categoria) => (
               <option 
+                key={categoria.id}
                 value={tipo === 'categoria' 
                   ? categoria.categoria
                   : categoria.montadora
