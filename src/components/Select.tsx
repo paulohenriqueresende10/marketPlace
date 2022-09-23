@@ -6,7 +6,7 @@ type selectProps = {
         categoria: string,
         montadora: string
     }[];
-    tipo: "montadora" | "categoria";
+    tipo?: "montadora" | "categoria";
     onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 

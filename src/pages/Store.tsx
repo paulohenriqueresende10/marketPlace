@@ -5,12 +5,16 @@ import Select from "../components/Select"
 import { StoreItem } from "../components/StoreItem"
 import storeItems from "../data/items.json"
 
+type filterTypeSelect = "name" | "categoria" | "montadora";
+  
+
 export function Store() {
   const [car, setcars] = useState(storeItems);
+  const [filter, setFilter] = useState<filterTypeSelect>("name");
 
-  const handleOnChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOnChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => { 
     const searchInputValue = event.target.value; 
-    const filterTypeValue = "name";
+    const filterTypeValue = filter;
     const newCar = storeItems.filter((car) => car[filterTypeValue].toLowerCase().includes(searchInputValue));
     setcars(newCar);
   };
@@ -29,6 +33,18 @@ export function Store() {
     });
     setcars(newCar);
   }
+  const handleOnChangeSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const changeSelectValue = event.target.value;
+    if(changeSelectValue === "name") {
+      setFilter("name");
+    }
+    if(changeSelectValue === "categoria") {
+      setFilter("categoria");
+    }
+    if(changeSelectValue === "montadora") {
+      setFilter("montadora");
+    }   
+  }
 
   return (
     <> 
@@ -45,6 +61,12 @@ export function Store() {
             tipo={"categoria"}  
             onChange={handleChangeCategoria} 
           />
+          <select onChange={handleOnChangeSelect}>
+            <option value={"selecione"}>Selecione</option>
+            <option value={"nome"}>Nome</option>
+            <option value={"categoria"}>Categoria</option>
+            <option value={"montadora"}>Montadora</option>
+          </select>
           <Input
             type="text"
             placeholder="Procure pelo carro desejado"
