@@ -265,3 +265,8 @@ input {
     color: #ff5c1d;
     border-color: #ff5c1d;
 }
+.btn-outline-primary:hover {
+    color: #fffff;
+    border-color: #ff5c1d;
+    background-color: #ff5c1d;
+}
