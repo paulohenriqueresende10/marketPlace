@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Col, Row } from "react-bootstrap"
 import Input from "../components/input"
 import Select from "../components/Select"
 import { StoreItem } from "../components/StoreItem"
@@ -71,14 +70,13 @@ export function Store() {
           />
           <div className="d-flex">
             <select onChange={handleOnChangeSelect}>
-              <option value={"selecione"}>Selecione</option>
               <option value={"nome"}>Nome</option>
               <option value={"categoria"}>Categoria</option>
               <option value={"montadora"}>Montadora</option>
             </select>
             <Input
               type="text"
-              placeholder="Procure pelo carro desejado"
+              placeholder="Procure seu carro"
               onChange={handleOnChangeInput}
               style={{
                 outline: "none",
