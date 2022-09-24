@@ -1,6 +1,6 @@
 import storeItems from "../data/items.json"
 
-export default function Home() {
+export function Home() {
   return (
     <>
       <h1 className="titulo-pagina">Home</h1>
