@@ -261,3 +261,7 @@ input {
     font-style: italic;
     margin-top: 4px;
   }
+.btn-outline-primary {
+    color: #ff5c1d;
+    border-color: #ff5c1d;
+}
