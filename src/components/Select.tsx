@@ -6,7 +6,7 @@ type selectProps = {
         categoria: string,
         montadora: string
     }[];
-    tipo?: "montadora" | "categoria";
+    tipo: "montadora" | "categoria";
     onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
@@ -20,7 +20,7 @@ export default function Select({ onChange, categorias, tipo }: selectProps) {
 ); 
   return (
     <select onChange={onChange}> 
-        <option defaultValue={0}>Selecione</option>  
+        <option value={"selecione"} defaultValue={0}>Selecione</option>  
         {
             categorias.map((categoria) => (
               <option 

@@ -19,23 +19,23 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
   const quantity = getItemQuantity(id)
 
   return (
-    <Card className="h-100">
-      <Card.Img
-        variant="top"
+    <div className="h-100 card">
+      <img
+        className="card-img-top"
         src={imgUrl}
         height="200px"
         style={{ objectFit: "cover" }}
       />
-      <Card.Body className="d-flex flex-column">
-        <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
+      <div className="d-flex flex-column card-body">
+        <div className="d-flex justify-content-between align-items-baseline mb-4 card-title h5">
           <span className="fs-2">{name}</span>
           <span className="ms-2 text-muted">{formatCurrency(price)}</span>
-        </Card.Title>
+        </div>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+            <button type="button" className="w-100 btn btn-primary" onClick={() => increaseCartQuantity(id)}>
               + Adicionar
-            </Button>
+            </button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
@@ -45,23 +45,23 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 className="d-flex align-items-center justify-content-center"
                 style={{ gap: ".5rem" }}
               >
-                <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+                <button type="button" className="btn btn-primary" onClick={() => decreaseCartQuantity(id)}>-</button>
                 <div>
                   <span className="fs-3">{quantity}</span> no Carrinho
                 </div>
-                <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+                <button type="button" className="btn btn-primary" onClick={() => increaseCartQuantity(id)}>+</button>
               </div>
-              <Button
+              <button
+                type="button"
+                className="btn btn-danger btn-sm"
                 onClick={() => removeFromCart(id)}
-                variant="danger"
-                size="sm"
               >
                 Remover
-              </Button>
+              </button>
             </div>
           )}
         </div>
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   )
 }

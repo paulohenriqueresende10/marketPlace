@@ -7,26 +7,35 @@ import Logo from "./Logo"
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart()
   return (
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
+    <nav className="bg-white shadow-sm mb-3 navbar navbar-expand navbar-light sticky-top">
       <Logo width="80px" padding="0px" />
-      <Container>
-        <Nav className="me-auto">
+      <div className="container">
+        <div className="me-auto nav">
           <Nav.Link to="/" as={NavLink}>
-           <House size={25} weight="bold" /> Home
+            <House 
+              size={25} 
+              weight="bold" 
+            /> Home
           </Nav.Link>
           <Nav.Link to="/store" as={NavLink}>
-            <Storefront size={25} weight="bold" /> Loja
+            <Storefront 
+              size={25} 
+              weight="bold" 
+            /> Loja
           </Nav.Link>
           <Nav.Link to="/about" as={NavLink}>
-            <Info size={25} weight="bold" /> Sobre
+            <Info 
+              size={25} 
+              weight="bold" 
+            /> Sobre
           </Nav.Link>
-        </Nav>
+        </div>
         {cartQuantity > 0 && (
-          <Button
+          <button
+            type="button"
             onClick={openCart}
             style={{ width: "3rem", height: "3rem", position: "relative" }}
-            variant="outline-primary"
-            className="rounded-circle"
+            className="rounded-circle btn btn-outline-primary"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,9 +59,9 @@ export function Navbar() {
             >
               {cartQuantity}
             </div>
-          </Button>
+          </button>
         )}
-      </Container>
-    </NavbarBs>
+      </div>
+    </nav>
   )
 }

@@ -21,17 +21,25 @@ export function Store() {
   
   const handleChangeCategoria = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const changeSelectValue = event.target.value;
-    const newCar = storeItems.filter((car) => {
-      return car.categoria === changeSelectValue ? true : false
-    });
-    setcars(newCar);
+    if(changeSelectValue === "selecione") {
+      setcars(storeItems);
+    } else {
+      const newCar = storeItems.filter((car) => {
+        return car.categoria === changeSelectValue ? true : false
+      });
+      setcars(newCar);
+    }
   }
   const handleChangeMontadora = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const changeSelectValue = event.target.value;
-    const newCar = storeItems.filter((car) => {
-      return car.montadora === changeSelectValue ? true : false
-    });
-    setcars(newCar);
+    if(changeSelectValue === "selecione") {
+      setcars(storeItems);
+    } else {
+      const newCar = storeItems.filter((car) => {
+        return car.montadora === changeSelectValue ? true : false
+      });
+      setcars(newCar);
+    }
   }
   const handleOnChangeSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const changeSelectValue = event.target.value;
@@ -50,7 +58,7 @@ export function Store() {
     <> 
       <div className="d-flex justify-content-between">
         <h1 className="titulo-pagina">Carros</h1> 
-        <div className="d-flex justify-content-center p-3">
+        <div className="d-flex justify-content-center gap-3 p-3">
           <Select 
             categorias={storeItems}
             tipo={"montadora"} 
@@ -61,29 +69,31 @@ export function Store() {
             tipo={"categoria"}  
             onChange={handleChangeCategoria} 
           />
-          <select onChange={handleOnChangeSelect}>
-            <option value={"selecione"}>Selecione</option>
-            <option value={"nome"}>Nome</option>
-            <option value={"categoria"}>Categoria</option>
-            <option value={"montadora"}>Montadora</option>
-          </select>
-          <Input
-            type="text"
-            placeholder="Procure pelo carro desejado"
-            onChange={handleOnChangeInput}
-            style={{
-              outline: "none",
-            }}
-          />
+          <div className="d-flex">
+            <select onChange={handleOnChangeSelect}>
+              <option value={"selecione"}>Selecione</option>
+              <option value={"nome"}>Nome</option>
+              <option value={"categoria"}>Categoria</option>
+              <option value={"montadora"}>Montadora</option>
+            </select>
+            <Input
+              type="text"
+              placeholder="Procure pelo carro desejado"
+              onChange={handleOnChangeInput}
+              style={{
+                outline: "none",
+              }}
+            />
+          </div>
         </div> 
       </div>
-      <Row md={2} xs={1} lg={3} className="g-3">
+      <div className="g-3 row row-cols-lg-3 row-cols-md-2 row-cols-1">
         {car.map(item => (
-          <Col key={item.id}>
+          <div className="col" key={item.id}>
             <StoreItem {...item} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
     </>
   )
 }

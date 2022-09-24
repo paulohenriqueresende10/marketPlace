@@ -4,3 +4,42 @@
     font-size: clamp(2rem, 3.5vw, 3rem);
     padding: 10px;
 }
+select,
+input {
+    border-radius: 4px;
+    border: 0;
+}
+.nav-link{
+    color: #ff5c1d;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out
+}
+.nav-link:hover{
+    color: #C94916;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out
+}
+.nav-link:focus{
+    color: #C94916;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out
+}
+.btn-primary {
+    color: #fff;
+    background-color: #ff5c1d;
+    border-color:#ff5c1d;
+}
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:active {
+    color: #fff;
+    background-color: #C94916;
+    border-color: #C94916;
+}
+.btn-primary:active {
+    color: #fff;
+    background-color: #C94916;
+    border-color: #C94916;
+}
+.btn {
+    border-radius: 1.25rem;
+}
